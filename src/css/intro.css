@@ -1,0 +1,31 @@
+/* intro.css */
+
+.intro-page {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    text-align: center;
+    color: #333;
+}
+
+.intro-content {
+    animation: text 2s;
+}
+
+
+@keyframes text {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

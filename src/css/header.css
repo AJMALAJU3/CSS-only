@@ -1,0 +1,36 @@
+/* header.css */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+}
+
+.header_left {
+    min-width: 40%;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.header_logo {
+    width: 2rem;
+}
+
+.header_right {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.header_button {
+    padding: 0.7rem 1.3rem;
+    border-radius: 8px;
+    border-width: 0;
+}

@@ -1,0 +1,42 @@
+/* quote.css */
+
+.quote-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #181818; 
+    padding: 3rem 1rem;
+    height: 100vh; 
+}
+
+.quote-section__inner {
+    max-width: 60%; 
+    text-align: center; 
+    padding: 2rem;
+}
+
+.quote-section__text {
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
+    line-height: 1.8;
+    font-weight: 800; 
+    letter-spacing: 1px; 
+    word-spacing: 2px; 
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range-start: 10px;
+    animation-range-end: 50%;
+}
+
+
+@keyframes fade-in {
+    from {
+        scale: 0.8;
+        opacity: 0;
+    }
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+

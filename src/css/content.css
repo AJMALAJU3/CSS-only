@@ -1,0 +1,60 @@
+/* content.css */
+
+.content-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #181818; 
+    padding: 3rem 1rem;
+    height: 100vh; 
+}
+
+.content-section__inner {
+    max-width: 60%; 
+    text-align: center; 
+    padding: 2rem;
+}
+
+.content-section__text {
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
+    line-height: 1.8;
+    font-size: 3rem;
+    font-weight: 500; 
+    letter-spacing: 1px; 
+    word-spacing: 2px; 
+}
+
+.letter-fade1 {
+    display: inline-block;
+    opacity: 0; 
+    animation: fadeIn 1s ease forwards;
+}
+
+.letter-fade2 {
+    display: inline-block;
+    opacity: 0; 
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 1;
+}
+
+.letter-fade3 {
+    display: inline-block;
+    opacity: 0; 
+    animation: fadeIn 2s ease forwards;
+}
+
+.letter {
+    display: inline-block;
+    opacity: 1; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
