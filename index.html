@@ -10,7 +10,7 @@
     <div class="container">
         <header class="header">
             <div class="header_left">
-                <img src="/assets/images/icon.png" class="header_logo" alt="Fingrow Logo">
+                <img src="assets/images/icon.png" class="header_logo" alt="Fingrow Logo">
                 <h2 class="header_brand-name">Fingrow</h2>
             </div>
             <div class="header_right">
@@ -104,31 +104,8 @@
         </div>
     </div>
 </body>
+    <script src="src/js/content.js"></script>
+    <script src="src/js/quote.js"></script>
+    <script src="src/js/footer.js"></script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-    const letters = document.querySelectorAll('.text-animate');
-
-    const brandNameObserver = new IntersectionObserver(
-        (entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    const target = entry.target;
-                    const delay = Array.from(letters).indexOf(target) * 0.1; 
-                    target.style.transitionDelay = `${delay}s`;
-                    target.classList.add('visible');
-                }
-            });
-        },
-        {
-            threshold: 0.5,
-        }
-    );
-
-    letters.forEach((letter) => brandNameObserver.observe(letter));
-});
-
-</script>
-    <script src="/src/js/content.js"></script>
-    <script src="/src/js/quote.js"></script>
 </html>
