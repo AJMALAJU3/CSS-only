@@ -19,27 +19,116 @@
             </div>
         </header>
     </div>    
+    
     <div class="intro-page" style="background-color: rgba(0, 0, 0, 0.319);">
         <h1 class="intro-content">Home Page</h1>
     </div>
-    <div style="background-color: #181818;">
-        <div class="quote-section">
-            <div class="quote-section__inner">
-                <h1 class="quote-section__text">
-                    " If you want people to have fun—give them the day off. If you want them to learn... engage them with the content."
-                </h1>
-            </div>
-        </div>
-    </div>
-
+    
     
     <div class="content-section">
         <div class="content-section__inner">
             <h1 class="content-section__text"></h1>
         </div>
     </div>
+
+    <div class="discover-section">
+        <div class="discover-section__inner">
+            <div class="discover-section__header">
+                <p class="discover-section__header-text">Discover our courses</p>
+            </div>
+            <div class="discover-section__navigate">
+                <button class="discover-section__navigate-button">Business & Economics</button>
+                <button class="discover-section__navigate-button">Investment & Markets</button>
+                <button class="discover-section__navigate-button">Personal Finance</button>
+                <button class="discover-section__navigate-button">Economic Theories</button>
+            </div>
+            <div class="discover-section__cards">
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+            </div>
+        </div>
+    </div>
     
+    <div class="theme-section">
+        <div class="theme-section__inner">
+            <div class="theme-section__text-container">
+                <p class="theme-section__text">Customer</p>
+            </div>
+            <div class="theme-section__text-container">
+                <p class="theme-section__text">experiences</p>
+            </div>
+            <div class="theme-section__text-container">
+                <p class="theme-section__text">you can trust.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-section">
+        
+        <div class="footer-section__inner" >
+            <div class="footer-section_mail">
+                <p class="footer-mail">hello@fingrow.com</p>
+            </div>
+            <div class="footer-left">
+                <div>
+                    <p class="footer-contents">Benefits</p>
+                    <p class="footer-contents">Our partners</p>
+                    <p class="footer-contents">Courses</p>
+                    <p class="footer-contents">Testimanials</p>
+                </div>
+                <div class="connect">
+                    <input type="text" class="connect-input" placeholder="email address">
+                </div>
+                
+                <div class="social-media">
+                    <p class="social-media_icon">I</p>
+                    <p class="social-media_icon">C</p>
+                    <p class="social-media_icon">O</p>
+                    <p class="social-media_icon">N</p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-brand-name">
+                    <div class="brand-name-text">
+                        <p class="text-animate">F</p>
+                        <p class="text-animate">I</p>
+                        <p class="text-animate">N</p>
+                        <p class="text-animate">G</p>
+                        <p class="text-animate">R</p>
+                        <p class="text-animate">O</p>
+                        <p class="text-animate">W</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const letters = document.querySelectorAll('.text-animate');
+
+    const brandNameObserver = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    const delay = Array.from(letters).indexOf(target) * 0.1; 
+                    target.style.transitionDelay = `${delay}s`;
+                    target.classList.add('visible');
+                }
+            });
+        },
+        {
+            threshold: 0.5,
+        }
+    );
+
+    letters.forEach((letter) => brandNameObserver.observe(letter));
+});
+
+</script>
     <script src="/src/js/content.js"></script>
     <script src="/src/js/quote.js"></script>
 </html>

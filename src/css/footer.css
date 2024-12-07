@@ -1,0 +1,151 @@
+.footer-section {
+    height: 90vh;
+    display: flex;
+    align-items: end;
+}
+
+
+.footer-section__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #181818; 
+    width: 100%;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    height: 70%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.footer-section_mail {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+}
+.footer-mail {
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
+    font-weight: 500; 
+    font-size: 2rem;
+    width: fit-content;
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range-start: 10px;
+    animation-range-end: 20%;
+}
+ 
+
+.footer-left {
+    width: 50%;
+    height: 60%;
+}
+
+.footer-contents {
+    color: whitesmoke;
+    margin-bottom: 1rem;
+    animation: fade linear;
+    animation-timeline: view();
+    animation-range-start: 0;
+    animation-range-end: 30%;
+}
+
+.connect {
+    position: relative;
+}
+
+.connect-input {
+    background-color: #181818;
+    padding: 3px 6px; 
+    color: white;
+    outline: none;
+    width: 60%;
+    border: none;
+}
+
+.connect::after {
+    content: '';
+    height: 1px;
+    width: 50%;
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    background-color: whitesmoke;
+    animation: fade linear;
+    animation-timeline: view();
+    animation-range-start: 0;
+    animation-range-end: 30%;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    text-align: end;
+    padding-top: 1rem;
+}
+.social-media_icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: rgb(150, 150, 150);
+    animation: fade linear;
+    animation-timeline: view();
+    animation-range-start: 0;
+    animation-range-end: 20%;
+}
+.footer-right {
+    width: 50%;
+    height: 60%;
+    display: flex;
+
+}
+
+.brand-name-text {
+    color: whitesmoke;
+    letter-spacing: -13px; 
+    display: flex;
+    gap: 10px;
+
+}
+.text-animate {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800; 
+    font-size: 6rem;
+    opacity: 0;
+    transform: translateY(100px) ;
+    transition: opacity 0.5s ease, transform 1.5s ease;
+}
+
+.text-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        scale: 0.2;
+        opacity: 0;
+    }
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
